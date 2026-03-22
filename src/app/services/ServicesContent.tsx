@@ -6,7 +6,7 @@ import { PageTransition } from "@/components/shared/PageTransition";
 import { CTA } from "@/components/sections/CTA";
 import { services } from "@/lib/constants";
 
-const serviceEmojis = ["🎨", "📱", "✏️", "🌐", "📊", "🎬"];
+const serviceEmojis = ["📱", "🎨", "🎯", "🎬", "📈", "✍️"];
 
 export function ServicesContent() {
   return (

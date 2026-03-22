@@ -10,17 +10,19 @@ const navigateLinks = [
 ];
 
 const serviceLinks = [
-  { label: "Brand Identity", href: "/services" },
-  { label: "Digital Strategy", href: "/services" },
+  { label: "Social Media Management", href: "/services" },
+  { label: "Branding & Design", href: "/services" },
+  { label: "Ads & Marketing Strategy", href: "/services" },
   { label: "Content Creation", href: "/services" },
-  { label: "Web Design", href: "/services" },
+  { label: "Consulting & Growth", href: "/services" },
+  { label: "Copy Writing", href: "/services" },
 ];
 
 const socialLinks = [
-  { label: "\ud835\udd4f", title: "Twitter" },
   { label: "ig", title: "Instagram" },
+  { label: "fb", title: "Facebook" },
+  { label: "tt", title: "TikTok" },
   { label: "in", title: "LinkedIn" },
-  { label: "dr", title: "Dribbble" },
 ];
 
 export function Footer() {
@@ -34,10 +36,10 @@ export function Footer() {
               href="/"
               className="mb-4 block font-display text-xl font-extrabold tracking-tight text-fg"
             >
-              MARK<span className="text-accent">TX</span>
+              Market<span className="text-accent">ix</span>
             </Link>
             <p className="text-sm text-muted leading-relaxed max-w-[300px]">
-              A creative marketing studio crafting brands that break through the noise. Based everywhere, working globally.
+              Based in Albania, working globally.
             </p>
           </div>
 
@@ -116,7 +118,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/[0.04] pt-8 sm:flex-row">
           <span className="text-xs text-muted">
-            &copy; {new Date().getFullYear()} Marketix Studio. All rights reserved.
+            &copy; {new Date().getFullYear()} Marketix. All rights reserved.
           </span>
           <div className="flex gap-3">
             {socialLinks.map((link) => (

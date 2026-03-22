@@ -1,35 +1,12 @@
 "use client";
 
-import { useRef } from "react";
-import { motion, useInView } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { GradientBlob } from "@/components/shared/GradientBlob";
-import { useCountUp } from "@/hooks/useCountUp";
-import { stats } from "@/lib/constants";
-
-function HeroStat({ value, prefix, suffix, label, inView }: {
-  value: number;
-  prefix?: string;
-  suffix?: string;
-  label: string;
-  inView: boolean;
-}) {
-  const count = useCountUp(value, 2000, inView);
-  return (
-    <div>
-      <div className="font-display text-[2.5rem] font-extrabold text-accent">
-        {prefix}{count}{suffix}
-      </div>
-      <div className="mt-1 text-xs uppercase tracking-[0.1em] text-muted">{label}</div>
-    </div>
-  );
-}
 
 export function Hero() {
-  const statsRef = useRef(null);
-  const inView = useInView(statsRef, { once: true, amount: 0.5 });
 
   return (
     <section className="relative min-h-screen flex items-center pt-32 pb-16 lg:pt-36 lg:pb-20 overflow-hidden">
@@ -50,17 +27,6 @@ export function Hero() {
       />
 
       <Container className="relative z-10 w-full">
-        {/* Badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.2 }}
-          className="inline-flex items-center gap-2 rounded-full border border-accent/[0.15] bg-glass px-4 py-2 text-xs font-medium text-accent mb-8"
-        >
-          <span className="h-1.5 w-1.5 rounded-full bg-accent animate-pulse2" />
-          Available for Q2 2026 Projects
-        </motion.div>
-
         {/* Headline */}
         <h1 className="font-display text-[clamp(3rem,8vw,7rem)] font-extrabold leading-[0.95] tracking-[-0.04em] mb-6">
           <span className="block overflow-hidden">
@@ -123,18 +89,6 @@ export function Hero() {
           </Button>
         </motion.div>
 
-        {/* Stats */}
-        <motion.div
-          ref={statsRef}
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 1, delay: 1 }}
-          className="flex flex-wrap gap-8 lg:gap-12 mt-16 pt-10 border-t border-white/[0.06]"
-        >
-          {stats.map((stat) => (
-            <HeroStat key={stat.label} {...stat} inView={inView} />
-          ))}
-        </motion.div>
       </Container>
     </section>
   );

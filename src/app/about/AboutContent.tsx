@@ -52,12 +52,12 @@ export function AboutContent() {
                 <div className="inline-flex items-center gap-2 text-[0.75rem] font-semibold uppercase tracking-[0.2em] text-accent before:content-[''] before:w-[30px] before:h-px before:bg-accent">
                   Who We Are
                 </div>
-                <h2 className="font-display text-[clamp(2rem,4vw,3rem)] font-extrabold tracking-tight leading-[1.1] text-fg">
+                <h2 className="font-heading text-[clamp(2rem,4vw,3rem)] font-extrabold tracking-tight leading-[1.1] text-fg">
                   We don&apos;t just market.<br />
                   We <span className="text-accent">move</span> people.
                 </h2>
                 <p className="text-muted text-lg leading-relaxed">
-                  Founded in 2019, Marketix is a collective of strategists, designers, and storytellers obsessed with creating brands that resonate. We believe great marketing isn&apos;t about noise — it&apos;s about meaning.
+                  Marketix is a collective of strategists, designers, and storytellers obsessed with creating brands that resonate. We believe great marketing isn&apos;t about noise — it&apos;s about meaning.
                 </p>
                 <p className="text-muted leading-relaxed">
                   What started as a two-person consultancy has grown into a full-service creative studio serving 200+ clients worldwide. Our 97% retention rate tells the story — we let results do the talking.

@@ -39,7 +39,7 @@ export function Navbar() {
               href="/"
               className="font-display text-2xl font-extrabold tracking-tight text-fg"
             >
-              MARK<span className="text-accent">TX</span>
+              Market<span className="text-accent">ix</span>
             </Link>
 
             <div className="hidden items-center gap-10 md:flex">

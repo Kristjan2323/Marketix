@@ -5,14 +5,14 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { services } from "@/lib/constants";
 
-const serviceEmojis = ["🎨", "📱", "✏️", "🌐", "📊", "🎬"];
+const serviceEmojis = ["📱", "🎨", "🎯", "🎬", "📈", "✍️"];
 const serviceTags: string[][] = [
-  ["Technical SEO", "Keyword Strategy", "Link Building"],
-  ["Paid Media", "SEO/SEM", "Analytics"],
-  ["Social Media", "Copywriting", "Video"],
-  ["UI/UX", "Development", "CRO"],
-  ["Funnels", "A/B Testing", "Automation"],
-  ["Brand Films", "Motion", "Editing"],
+  ["Instagram", "TikTok", "LinkedIn"],
+  ["Identity", "Visual System", "Design"],
+  ["Google Ads", "Meta Ads", "TikTok Ads"],
+  ["Video", "Photography", "Graphics"],
+  ["Strategy", "Analysis", "Growth"],
+  ["Web Copy", "Ad Copy", "Email"],
 ];
 
 export function Services() {

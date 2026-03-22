@@ -6,8 +6,8 @@ export const siteConfig = {
   url: "https://marketix.com",
   email: "hello@marketix.com",
   phone: "+1 (555) 234-5678",
-  address: "123 Marketing Ave, Suite 400, San Francisco, CA 94105",
-  hours: "Mon – Fri: 9:00 AM – 6:00 PM PST",
+  address: "Tirana, Albania",
+  hours: "Mon – Fri: 9:00 AM – 6:00 PM",
 };
 
 export const navLinks: NavLink[] = [
@@ -21,40 +21,40 @@ export const navLinks: NavLink[] = [
 
 export const services: Service[] = [
   {
-    icon: "Search",
-    title: "SEO & Search Marketing",
-    description: "Dominate search rankings with our proven SEO strategies. We optimize every facet of your online presence to drive organic traffic that converts.",
-    deliverables: ["Technical SEO audit", "Keyword research & strategy", "On-page optimization", "Link building campaigns", "Monthly reporting & analytics"],
-  },
-  {
-    icon: "Target",
-    title: "Paid Advertising",
-    description: "Maximize ROI with precision-targeted PPC campaigns across Google, Meta, and LinkedIn. Every dollar works harder with our data-driven approach.",
-    deliverables: ["Google Ads management", "Social media advertising", "Retargeting campaigns", "A/B testing & optimization", "Conversion tracking setup"],
-  },
-  {
     icon: "Share2",
     title: "Social Media Management",
     description: "Build an engaged community and amplify your brand voice across every platform. We create content that sparks conversations and drives action.",
-    deliverables: ["Content calendar planning", "Community management", "Influencer partnerships", "Social listening & analytics", "Platform-specific strategies"],
+    deliverables: ["Content calendar planning", "Community management", "Platform-specific strategies", "Social listening & analytics", "Influencer partnerships"],
   },
   {
-    icon: "FileText",
-    title: "Content Marketing",
-    description: "Tell your brand story with compelling content that educates, entertains, and converts. From blog posts to video scripts, we craft narratives that resonate.",
-    deliverables: ["Content strategy development", "Blog writing & publishing", "Video content planning", "Email newsletter creation", "Content performance tracking"],
+    icon: "Palette",
+    title: "Branding & Design",
+    description: "Craft a visual identity that stands out and tells your brand story. From logos to full brand systems, we design experiences that leave a lasting impression.",
+    deliverables: ["Logo & brand identity", "Brand guidelines", "Visual system design", "Packaging & print", "Digital asset creation"],
   },
   {
-    icon: "Mail",
-    title: "Email Marketing",
-    description: "Nurture leads and drive repeat purchases with automated email sequences that feel personal. Our campaigns consistently outperform industry benchmarks.",
-    deliverables: ["Email automation flows", "Newsletter design & copy", "List segmentation", "A/B testing", "Deliverability optimization"],
+    icon: "Target",
+    title: "Ads & Marketing Strategy",
+    description: "Maximize ROI with precision-targeted campaigns across Google, Meta, TikTok, and beyond. Every dollar works harder with our data-driven approach.",
+    deliverables: ["Campaign strategy & setup", "Google & social ad management", "Audience targeting & segmentation", "A/B testing & optimization", "Performance tracking & reporting"],
   },
   {
-    icon: "Monitor",
-    title: "Web Design & Development",
-    description: "Launch high-converting websites that look stunning and perform flawlessly. We build fast, accessible, and SEO-friendly digital experiences.",
-    deliverables: ["Custom website design", "Responsive development", "CMS integration", "Performance optimization", "Ongoing maintenance & support"],
+    icon: "Video",
+    title: "Content Creation",
+    description: "Tell your brand story with compelling content that educates, entertains, and converts. From reels to blog posts, we craft narratives that resonate.",
+    deliverables: ["Photo & video production", "Short-form video (Reels/TikTok)", "Graphic design & assets", "Blog writing & publishing", "Content calendar management"],
+  },
+  {
+    icon: "TrendingUp",
+    title: "Consulting & Growth",
+    description: "Strategic guidance to help you scale smarter. We analyze your current position and build a roadmap to sustainable, long-term growth.",
+    deliverables: ["Growth audit & analysis", "Marketing roadmap development", "Competitive analysis", "KPI setting & tracking", "Ongoing strategy sessions"],
+  },
+  {
+    icon: "PenTool",
+    title: "Copy Writing",
+    description: "Words that persuade, engage, and convert. From website copy to ad headlines, we craft messaging that speaks directly to your audience.",
+    deliverables: ["Website & landing page copy", "Ad copy & headlines", "Email sequences", "Social media captions", "Brand voice development"],
   },
 ];
 

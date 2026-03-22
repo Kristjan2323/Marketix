@@ -19,7 +19,7 @@ export function SectionHeading({ eyebrow, title, subtitle, centered = false, cla
           {eyebrow}
         </div>
       )}
-      <h2 className="font-display text-[clamp(2rem,4vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] text-fg">
+      <h2 className="font-heading text-[clamp(2rem,4vw,3.5rem)] font-extrabold tracking-tight leading-[1.1] text-fg">
         {title}
       </h2>
       {subtitle && (

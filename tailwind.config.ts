@@ -29,6 +29,7 @@ const config: Config = {
       fontFamily: {
         display: ["var(--font-syne)", "sans-serif"],
         body: ["var(--font-dm-sans)", "sans-serif"],
+        heading: ["var(--font-jakarta)", "sans-serif"],
       },
       borderRadius: {
         card: "16px",
