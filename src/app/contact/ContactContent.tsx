@@ -16,9 +16,9 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
+  email: z.email("Please enter a valid email"),
   company: z.string().optional(),
-  budget: z.enum(["under-5k", "5k-10k", "10k-25k", "25k-plus"], {
+  budget: z.enum(["under-500", "1000-plus", "5000-plus"], {
     message: "Please select a budget range",
   }),
   message: z.string().min(10, "Message must be at least 10 characters"),
@@ -115,10 +115,9 @@ export function ContactContent() {
                     )}
                   >
                     <option value="">Select your budget range</option>
-                    <option value="under-5k">Under $5,000/mo</option>
-                    <option value="5k-10k">$5,000 – $10,000/mo</option>
-                    <option value="10k-25k">$10,000 – $25,000/mo</option>
-                    <option value="25k-plus">$25,000+/mo</option>
+                    <option value="under-500">Under $500</option>
+                    <option value="1000-plus">$1,000+</option>
+                    <option value="5000-plus">$5,000+</option>
                   </select>
                   {errors.budget && (
                     <p className="text-sm text-accent2">{errors.budget.message}</p>

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { siteConfig } from "@/lib/constants";
 
@@ -34,9 +35,9 @@ export function Footer() {
           <div>
             <Link
               href="/"
-              className="mb-4 block font-display text-xl font-extrabold tracking-tight text-fg"
+              className="mb-4 block"
             >
-              Market<span className="text-accent">ix</span>
+              <Image src="/images/logo.png" alt="Marketix" width={120} height={44} className="h-9 w-auto" />
             </Link>
             <p className="text-sm text-muted leading-relaxed max-w-[300px]">
               Based in Albania, working globally.

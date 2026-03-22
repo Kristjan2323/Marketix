@@ -1,12 +1,12 @@
 import { NextRequest, NextResponse } from "next/server";
 import { z } from "zod";
-import { getResend } from "@/lib/resend";
+import nodemailer from "nodemailer";
 
 const contactSchema = z.object({
   name: z.string().min(2, "Name must be at least 2 characters"),
-  email: z.string().email("Please enter a valid email"),
+  email: z.email("Please enter a valid email"),
   company: z.string().optional(),
-  budget: z.enum(["under-5k", "5k-10k", "10k-25k", "25k-plus"]),
+  budget: z.enum(["under-500", "1000-plus", "5000-plus"]),
   message: z.string().min(10, "Message must be at least 10 characters"),
 });
 
@@ -24,13 +24,20 @@ function checkRateLimit(ip: string): boolean {
     return true;
   }
 
-  if (entry.count >= maxRequests) {
-    return false;
-  }
-
+  if (entry.count >= maxRequests) return false;
   entry.count++;
   return true;
 }
+
+const transporter = nodemailer.createTransport({
+  host: process.env.SMTP_HOST,
+  port: Number(process.env.SMTP_PORT),
+  secure: true,
+  auth: {
+    user: process.env.SMTP_USER,
+    pass: process.env.SMTP_PASS,
+  },
+});
 
 export async function POST(request: NextRequest) {
   try {
@@ -62,10 +69,10 @@ export async function POST(request: NextRequest) {
       "25k-plus": "$25,000+",
     };
 
-    // Send notification email
-    await getResend().emails.send({
-      from: "Marketix <onboarding@resend.dev>",
-      to: process.env.CONTACT_EMAIL_TO || "hello@marketix.com",
+    // Notification email to Marketix
+    await transporter.sendMail({
+      from: `"Marketix Contact" <${process.env.SMTP_USER}>`,
+      to: process.env.CONTACT_EMAIL_TO || process.env.SMTP_USER,
       subject: `New Contact: ${name} — ${company || "No company"}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -78,14 +85,14 @@ export async function POST(request: NextRequest) {
       `,
     });
 
-    // Send confirmation email
-    await getResend().emails.send({
-      from: "Marketix <onboarding@resend.dev>",
+    // Confirmation email to the sender
+    await transporter.sendMail({
+      from: `"Marketix" <${process.env.SMTP_USER}>`,
       to: email,
       subject: "Thanks for reaching out — Marketix",
       html: `
         <h2>Hi ${name},</h2>
-        <p>Thank you for contacting Marketix! We've received your message and a member of our team will get back to you within 24 hours.</p>
+        <p>Thank you for contacting Marketix! We've received your message and will get back to you within 24 hours.</p>
         <p>Best regards,<br>The Marketix Team</p>
       `,
     });

@@ -4,8 +4,8 @@ export const siteConfig = {
   name: "Marketix",
   description: "We scale brands with data-driven digital marketing strategies that deliver measurable results.",
   url: "https://marketix.com",
-  email: "hello@marketix.com",
-  phone: "+1 (555) 234-5678",
+  email: "contact@marketix.com",
+  phone: "+355 68 579 1962",
   address: "Tirana, Albania",
   hours: "Mon – Fri: 9:00 AM – 6:00 PM",
 };
@@ -137,7 +137,7 @@ export const teamMembers: TeamMember[] = [
 export const pricingTiers: PricingTier[] = [
   {
     name: "Starter",
-    price: "$1,500",
+    price: "$399",
     description: "Perfect for small businesses ready to establish their digital presence and start growing online.",
     features: [
       "2 marketing channels",
@@ -151,7 +151,7 @@ export const pricingTiers: PricingTier[] = [
   },
   {
     name: "Growth",
-    price: "$3,500",
+    price: "$699",
     description: "For scaling companies that need a comprehensive, multi-channel marketing strategy to accelerate growth.",
     features: [
       "5 marketing channels",

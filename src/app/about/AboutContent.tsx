@@ -1,9 +1,9 @@
 "use client";
 
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { AnimateOnScroll } from "@/components/shared/AnimateOnScroll";
 import { PageTransition } from "@/components/shared/PageTransition";
-import { Team } from "@/components/sections/Team";
 import { CTA } from "@/components/sections/CTA";
 
 const values = [
@@ -35,15 +35,21 @@ export function AboutContent() {
           <AnimateOnScroll>
             <div className="grid gap-12 lg:grid-cols-2 lg:items-center">
               {/* Visual */}
-              <div className="relative aspect-[4/5] rounded-card overflow-hidden bg-card">
-                <div className="absolute inset-0 flex items-center justify-center">
-                  {/* Spinning ring */}
-                  <div className="absolute top-[20%] left-[15%] h-[200px] w-[200px] rounded-full border-2 border-accent animate-spin-slow" />
-                  <div className="absolute bottom-[20%] right-[15%] h-[150px] w-[150px] rounded-full bg-accent2/30 blur-[40px]" />
-                  <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-[100px] w-[100px] rounded-full bg-accent/20 blur-[30px]" />
-                  <span className="absolute bottom-0 right-4 font-display text-[8rem] font-extrabold text-white/[0.03] leading-none">
-                    MK
-                  </span>
+              <div className="flex flex-col gap-4">
+                <div className="relative aspect-[4/5] rounded-card overflow-hidden bg-card">
+                  <Image
+                    src="/images/team/izi.png"
+                    alt="Izmir Akulli — Founder of Marketix"
+                    fill
+                    className="object-cover object-top"
+                  />
+                </div>
+                <div className="px-1">
+                  <p className="font-heading text-lg font-bold text-fg">Izmir Akulli</p>
+                  <p className="text-sm text-accent mb-2">Founder</p>
+                  <p className="text-sm text-muted leading-relaxed">
+                    The visionary behind Marketix, Izmir built this agency from the ground up with one goal — to help brands grow through smart strategy, bold creativity, and real results.
+                  </p>
                 </div>
               </div>
 
@@ -83,7 +89,6 @@ export function AboutContent() {
         </Container>
       </section>
 
-      <Team />
       <CTA />
     </PageTransition>
   );

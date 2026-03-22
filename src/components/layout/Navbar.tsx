@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { Menu } from "lucide-react";
 import { motion, useMotionValueEvent, useScroll } from "framer-motion";
 import { navLinks } from "@/lib/constants";
@@ -37,9 +38,9 @@ export function Navbar() {
           <nav className="flex h-16 items-center justify-between lg:h-20">
             <Link
               href="/"
-              className="font-display text-2xl font-extrabold tracking-tight text-fg"
+              className="flex items-center"
             >
-              Market<span className="text-accent">ix</span>
+              <Image src="/images/logo.png" alt="Marketix" width={140} height={50} className="h-10 w-auto" />
             </Link>
 
             <div className="hidden items-center gap-10 md:flex">
