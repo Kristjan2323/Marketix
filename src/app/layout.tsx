@@ -23,6 +23,7 @@ const plusJakartaSans = Plus_Jakarta_Sans({
   weight: ["400", "500", "600", "700", "800"],
 });
 
+
 export const metadata: Metadata = {
   title: {
     default: "Marketix — Creative Marketing Studio",
