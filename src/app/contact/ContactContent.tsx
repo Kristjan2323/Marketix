@@ -41,13 +41,19 @@ export function ContactContent() {
   const onSubmit = async (data: ContactFormData) => {
     setStatus("loading");
     try {
-      const res = await fetch("/api/contact", {
+      const res = await fetch("https://api.web3forms.com/submit", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(data),
+        body: JSON.stringify({
+          access_key: process.env.NEXT_PUBLIC_WEB3FORMS_KEY,
+          subject: `New Contact: ${data.name} — ${data.company || "No company"}`,
+          from_name: data.name,
+          ...data,
+        }),
       });
 
-      if (!res.ok) throw new Error();
+      const result = await res.json();
+      if (!result.success) throw new Error();
       setStatus("success");
       reset();
     } catch {
